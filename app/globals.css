@@ -8,10 +8,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --red:       #0D2B5E;
-  --red-h:     #091E42;
-  --red-lt:    #EEF3FF;
-  --blue:      #1A4FA0;
+  --topbar-h: 0px;
+  --red:       #111111;
+  --red-h:     #000000;
+  --red-lt:    #F0F0F0;
+  --blue:      #222222;
   --yellow:    #F5C518;
   --yellow-h:  #D4A800;
   --yellow-lt: #FFFBEA;
@@ -33,7 +34,7 @@
   --t:         .18s ease;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 72px); }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -60,8 +61,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: #fff;
   font-size: .82rem;
   font-weight: 500;
-  position: relative;
-  z-index: 101;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 102;
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
 }
 .topbar__inner {
   display: flex;
@@ -84,12 +89,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ===== HEADER ===== */
 .header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: var(--topbar-h);
+  left: 0; right: 0;
   z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.header.scrolled {
   background: var(--white);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  border-bottom-color: var(--border);
+  box-shadow: 0 2px 16px rgba(0,0,0,.12);
 }
 .header__inner {
   display: flex;
@@ -146,9 +157,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .header__address {
   font-size: .78rem;
-  color: var(--muted);
+  color: rgba(255,255,255,.8);
   display: none;
+  transition: color .25s ease;
 }
+.header.scrolled .header__address { color: var(--muted); }
 @media (min-width: 960px) { .header__address { display: block; } }
 
 .header__tel {
@@ -205,7 +218,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .hero__bg-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(9,30,66,.95) 0%, rgba(13,43,94,.82) 55%, rgba(13,43,94,.5) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,.92) 0%, rgba(17,17,17,.78) 55%, rgba(0,0,0,.45) 100%);
 }
 
 .hero__banner-content {
@@ -216,6 +229,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: space-between;
   gap: 32px;
   padding: 52px 20px;
+  padding-top: calc(var(--topbar-h) + 80px);
 }
 
 .hero__text-block { max-width: 540px; }
@@ -236,6 +250,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   gap: 12px;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 .promo-name {
   font-size: 1rem;
@@ -1079,7 +1094,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ===== PÁGINA SOBRE ===== */
-.sobre { padding-top: 70px; }
+.sobre { padding-top: 134px; }
 .sobre__hero { background: linear-gradient(135deg, #1a1a2e 0%, #111827 100%); color: #fff; padding: 64px 0; }
 .sobre__hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .sobre__badge { display: inline-block; background: var(--red); color: #fff; font-size: .75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
@@ -1645,7 +1660,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ===== PÁGINA DE DETALHE DO VEÍCULO ===== */
-.det { background: var(--bg); }
+.det { background: var(--bg); padding-top: 64px; }
 
 /* Gallery */
 .det__gallery {
@@ -1803,6 +1818,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .det__price-col:last-child { border-right: none; padding-right: 0; padding-left: 24px; }
 .det__price-col:nth-child(2) { padding-left: 24px; }
+.det__price-col:nth-child(2) > strong { color: #E8282A; }
 .det__price-col > span {
   font-size: .75rem;
   color: rgba(255,255,255,.5);

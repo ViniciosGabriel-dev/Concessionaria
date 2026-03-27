@@ -1,10 +1,21 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function TopBar() {
   const [visible, setVisible] = useState(true)
-  if (!visible) return null
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--topbar-h', isHome && visible ? '36px' : '0px')
+    return () => {
+      document.documentElement.style.setProperty('--topbar-h', '0px')
+    }
+  }, [isHome, visible])
+
+  if (!isHome || !visible) return null
 
   return (
     <div className="topbar">
@@ -13,7 +24,10 @@ export default function TopBar() {
           🔥 <strong>FEIRÃO DE MARÇO</strong> — Financiamento em até 60x &nbsp;·&nbsp; Aprovação mesmo com restrições &nbsp;·&nbsp;{' '}
           <a href="#financiamento">Simule agora</a>
         </span>
-        <button className="topbar__close" onClick={() => setVisible(false)}>✕</button>
+        <button className="topbar__close" onClick={() => {
+          setVisible(false)
+          document.documentElement.style.setProperty('--topbar-h', '0px')
+        }}>✕</button>
       </div>
     </div>
   )

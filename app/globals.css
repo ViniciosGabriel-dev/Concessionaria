@@ -120,7 +120,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--text);
 }
 .logo strong { color: var(--red); }
-.logo__img { height: 40px; width: auto; object-fit: contain; display: block; }
+.logo__img { margin-top: 10px; height: 120px; width: auto; object-fit: contain; display: block; }
+.logo--ft .logo__img { height: 90px; }
 .logo__mark {
   width: 32px; height: 32px;
   background: var(--red);

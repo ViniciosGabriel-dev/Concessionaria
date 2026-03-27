@@ -25,7 +25,7 @@ export default function Header() {
       <div className="header__inner container">
         <Link href="/" className="logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-light.png" alt="Top Multimarcas" className="logo__img" />
+          <img src={(!isHome || scrolled) ? '/logo_preta.png' : '/logo-light.png'} alt="Top Multimarcas" className="logo__img" />
         </Link>
 
         <nav className={`nav${menuOpen ? ' open' : ''}`} id="nav">

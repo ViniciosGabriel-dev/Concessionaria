@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoElite | Multimarcas | Compre seu carro com segurança</title>
+  <meta name="description" content="AutoElite Multimarcas: encontre veículos seminovos e usados com procedência, financiamento facilitado e atendimento transparente. Fale pelo WhatsApp agora." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR PROMOCIONAL ===== -->
+  <div class="topbar" id="topbar">
+    <div class="topbar__inner container">
+      <span>🔥 <strong>FEIRÃO DE MARÇO</strong> — Financiamento em até 60x &nbsp;·&nbsp; Aprovação mesmo com restrições &nbsp;·&nbsp; <a href="#financiamento">Simule agora</a></span>
+      <button class="topbar__close" onclick="this.closest('.topbar').style.display='none'">✕</button>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="logo">
+        <div class="logo__mark">AE</div>
+        <span>auto<strong>elite</strong></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#estoque" class="nav__link">Comprar</a>
+        <a href="#contato" class="nav__link">Vender</a>
+        <a href="#financiamento" class="nav__link">Financiar</a>
+        <a href="#diferenciais" class="nav__link">Sobre</a>
+        <a href="#avaliacoes" class="nav__link">Avaliações</a>
+        <a href="#contato" class="nav__link">Ajuda</a>
+      </nav>
+
+      <div class="header__right">
+        <a href="tel:+5511999999999" class="header__tel">(11) 99999-9999</a>
+        <a href="https://wa.me/5511999999999" target="_blank" class="header__wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <!-- Banner vermelho -->
+    <div class="hero__banner">
+      <div class="hero__banner-bg">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400&q=80" alt="Veículos AutoElite" class="hero__bg-img" />
+        <div class="hero__bg-overlay"></div>
+      </div>
+      <div class="hero__banner-content container">
+        <div class="hero__text-block">
+          <div class="hero__badge-promo">
+            <div class="hero__badge-icon">%</div>
+            <div>
+              <div class="promo-name">FEIRÃO</div>
+              <div class="promo-brand">AutoElite</div>
+            </div>
+          </div>
+          <h1 class="hero__h1">PARCELE SEU VEÍCULO<br /><span class="hero__destaque">EM ATÉ 60X</span></h1>
+          <p class="hero__sub">Taxa a partir de 0,89% a.m. · Parceria com os 4 maiores bancos</p>
+          <a href="#estoque" class="btn-hero">Ver ofertas →</a>
+        </div>
+        <div class="hero__stats-block">
+          <div class="hero__stat"><strong>+200</strong><span>veículos</span></div>
+          <div class="hero__stat"><strong>12 anos</strong><span>no mercado</span></div>
+          <div class="hero__stat"><strong>4.9★</strong><span>Google</span></div>
+          <div class="hero__stat"><strong>2h</strong><span>aprovação</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Busca centralizada -->
+    <div class="busca-outer">
+      <div class="busca-card container">
+        <p class="busca-label">Busque por <span id="busca-placeholder-text" class="busca-hint"></span></p>
+        <div class="busca-tabs">
+          <button class="btab active" onclick="setTab(this, 'carros')">🚗 Buscar carros</button>
+          <button class="btab" onclick="setTab(this, 'motos')">🏍️ Buscar motos</button>
+        </div>
+        <div class="busca-input-row">
+          <span class="busca-icon-spark">✦</span>
+          <input type="text" id="busca-keyword" class="busca-input-grande" placeholder="Descreva o que você está procurando..." onkeydown="if(event.key==='Enter') filtrarVeiculos()" />
+        </div>
+        <div class="busca-selects-row">
+          <select class="bselect" id="busca-marca"><option value="">Marca</option><option>Toyota</option><option>Honda</option><option>Volkswagen</option><option>Hyundai</option><option>Chevrolet</option><option>Jeep</option><option>Fiat</option></select>
+          <select class="bselect" id="busca-modelo"><option value="">Modelo</option><option>Corolla</option><option>HR-V</option><option>Compass</option><option>T-Cross</option><option>Creta</option><option>Pulse</option></select>
+          <select class="bselect" id="busca-preco"><option value="">Preço até</option><option>Até R$ 50.000</option><option>Até R$ 80.000</option><option>Até R$ 120.000</option><option>Até R$ 200.000</option><option>Acima de R$ 200.000</option></select>
+          <select class="bselect" id="busca-ano"><option value="">Ano</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020 ou anterior</option></select>
+          <select class="bselect" id="busca-cambio"><option value="">Câmbio</option><option>Automático</option><option>Manual</option><option>CVT</option></select>
+          <select class="bselect" id="busca-comb"><option value="">Combustível</option><option>Flex</option><option>Gasolina</option><option>Elétrico</option></select>
+        </div>
+        <button class="busca-btn-ver" onclick="filtrarVeiculos()">
+          Ver todas as ofertas (<span id="total-count">6</span>)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARCAS ===== -->
+  <section class="marcas" id="marcas">
+    <div class="container">
+      <h2 class="marcas__title">Marcas disponíveis</h2>
+      <div class="marcas__row">
+        <button class="marca-pill" onclick="filtrarPorMarca('Toyota')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Toyota_carlogo.svg/80px-Toyota_carlogo.svg.png" alt="Toyota" />
+          <span>Toyota</span>
+        </button>
+        <button class="marca-pill" onclick="filtrarPorMarca('Honda')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/80px-Honda.svg.png" alt="Honda" />
+          <span>Honda</span>
+        </button>
+        <button class="marca-pill" onclick="filtrarPorMarca('Volkswagen')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/80px-Volkswagen_logo_2019.svg.png" alt="Volkswagen" />
+          <span>Volkswagen</span>
+        </button>
+        <button class="marca-pill" onclick="filtrarPorMarca('Hyundai')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Hyundai_Motor_Company_logo.svg/80px-Hyundai_Motor_Company_logo.svg.png" alt="Hyundai" />
+          <span>Hyundai</span>
+        </button>
+        <button class="marca-pill" onclick="filtrarPorMarca('Jeep')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Jeep_logo.svg/80px-Jeep_logo.svg.png" alt="Jeep" />
+          <span>Jeep</span>
+        </button>
+        <button class="marca-pill" onclick="filtrarPorMarca('Fiat')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Fiat_Logo.svg/80px-Fiat_Logo.svg.png" alt="Fiat" />
+          <span>Fiat</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ESTOQUE ===== -->
+  <section class="estoque" id="estoque">
+    <div class="container">
+      <div class="estoque__top">
+        <div>
+          <h2 class="estoque__title">Ofertas em destaque</h2>
+          <p class="estoque__sub">Todos revisados, com documentação em dia e procedência verificada</p>
+        </div>
+        <div class="estoque__sort">
+          <span>Ordenar:</span>
+          <select id="ordenar" onchange="ordenarVeiculos(this.value)">
+            <option value="destaque">Destaques</option>
+            <option value="menor-preco">Menor preço</option>
+            <option value="maior-preco">Maior preço</option>
+            <option value="menor-km">Menor km</option>
+          </select>
+        </div>
+      </div>
+      <div class="veiculos__grid" id="veiculos-grid"></div>
+      <div class="estoque__rodape">
+        <a href="https://wa.me/5511999999999?text=Oi!%20Quero%20ver%20o%20estoque%20completo." target="_blank" class="btn-outline-red">Ver estoque completo →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section class="difs" id="diferenciais">
+    <div class="container">
+      <h2 class="h2-center">Por que comprar na AutoElite?</h2>
+      <p class="sub-center">Transparência e cuidado em cada etapa da sua compra</p>
+      <div class="difs__grid">
+        <div class="dif"><div class="dif__ico" style="background:#EBF4FF;color:#1D6DD4">🔍</div><h3>Veículos revisados</h3><p>Inspeção técnica completa antes de entrar no estoque. Você compra com segurança total.</p></div>
+        <div class="dif"><div class="dif__ico" style="background:#E6F9EF;color:#0B7A4A">💬</div><h3>Atendimento ágil</h3><p>Fale com nosso time no WhatsApp em minutos. Resposta real, sem robôs.</p></div>
+        <div class="dif"><div class="dif__ico" style="background:#FEF2F2;color:#E8282A">📄</div><h3>Documentação garantida</h3><p>IPVA em dia, sem multas, histórico verificado no Detran e Denatran.</p></div>
+        <div class="dif"><div class="dif__ico" style="background:#FFF7ED;color:#C2630A">💳</div><h3>Financiamento fácil</h3><p>4 bancos parceiros, aprovação em 2h, entrada facilitada, até 60 meses.</p></div>
+        <div class="dif"><div class="dif__ico" style="background:#F5F0FF;color:#7C3AED">🔒</div><h3>Procedência verificada</h3><p>Consultamos leilão, bloqueios e histórico completo de cada veículo.</p></div>
+        <div class="dif"><div class="dif__ico" style="background:#F0FDFA;color:#0D9488">🤝</div><h3>Suporte pós-venda</h3><p>Suporte completo para transferência e qualquer dúvida após a compra.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVALIAÇÕES ===== -->
+  <section class="avs" id="avaliacoes">
+    <div class="container">
+      <h2 class="h2-center">O que dizem nossos clientes</h2>
+      <div class="google-pill">
+        <svg viewBox="0 0 48 48" width="28" height="28"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+        <span><strong>4.9</strong> ★★★★★</span>
+        <span class="google-pill__count">+420 avaliações no Google</span>
+      </div>
+      <div class="avs__grid">
+        <div class="av">
+          <div class="av__head"><div class="av__av" style="background:#1A4FBF">MR</div><div><div class="av__nome">Marcos Ribeiro</div><div class="av__when">há 2 semanas · Google</div></div><div class="av__stars">★★★★★</div></div>
+          <p>"Comprei meu Corolla aqui e foi a melhor experiência que já tive com loja de carros. Sem pressão, documentação toda certa, e me explicaram o financiamento direitinho. Recomendo demais!"</p>
+          <span class="av__tag">🚗 Toyota Corolla 2022</span>
+        </div>
+        <div class="av">
+          <div class="av__head"><div class="av__av" style="background:#E8282A">AS</div><div><div class="av__nome">Ana Souza</div><div class="av__when">há 1 mês · Google</div></div><div class="av__stars">★★★★★</div></div>
+          <p>"Fui indicada por uma amiga. O carro estava idêntico ao anúncio, sem surpresas. Financiamento aprovado no mesmo dia. Time super atencioso e honesto do início ao fim!"</p>
+          <span class="av__tag">🚗 Honda HR-V 2023</span>
+        </div>
+        <div class="av">
+          <div class="av__head"><div class="av__av" style="background:#0B7A4A">FL</div><div><div class="av__nome">Felipe Lima</div><div class="av__when">há 3 semanas · Google</div></div><div class="av__stars">★★★★★</div></div>
+          <p>"Processo rápido e transparente. O consultor mandou vídeo do carro antes de eu ir à loja. Fechei em 2 dias. Loja de confiança de verdade. Já indiquei para família e amigos!"</p>
+          <span class="av__tag">🚗 Jeep Compass 2022</span>
+        </div>
+      </div>
+      <div class="selos-row">
+        <div class="selo">✅ Loja verificada</div>
+        <div class="selo">🏅 Atendimento bem avaliado</div>
+        <div class="selo">🔒 Compra segura</div>
+        <div class="selo">📍 CNPJ ativo desde 2012</div>
+        <div class="selo">⭐ 4.9 no Google</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINANCIAMENTO ===== -->
+  <section class="fin" id="financiamento">
+    <div class="container fin__inner">
+      <div class="fin__esq">
+        <span class="fin__tag">Crédito facilitado</span>
+        <h2 class="fin__h2">Financiamento sem burocracia</h2>
+        <p class="fin__p">Aprovação em até 2 horas. Parceria com os 4 maiores bancos do Brasil. Condições reais para o seu perfil.</p>
+        <ul class="fin__lista">
+          <li>✔ Taxa a partir de 0,89% a.m.</li>
+          <li>✔ Prazo de até 60 meses</li>
+          <li>✔ Aprovação mesmo com restrições</li>
+          <li>✔ Entrada facilitada</li>
+          <li>✔ Banco do Brasil, Bradesco, Santander, Itaú</li>
+        </ul>
+        <a href="https://wa.me/5511999999999" target="_blank" class="btn-wa-fin">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar com consultor de crédito
+        </a>
+      </div>
+      <div class="sim__card">
+        <h3>Simule sua parcela</h3>
+        <div class="sim__f">
+          <label>Valor do veículo</label>
+          <input type="range" id="sim-valor" min="30000" max="300000" step="5000" value="80000" oninput="calcularParcela()" />
+          <div class="sim__val" id="sim-valor-display">R$ 80.000</div>
+        </div>
+        <div class="sim__f">
+          <label>Entrada</label>
+          <input type="range" id="sim-entrada" min="0" max="100000" step="2000" value="20000" oninput="calcularParcela()" />
+          <div class="sim__val" id="sim-entrada-display">R$ 20.000</div>
+        </div>
+        <div class="sim__f">
+          <label>Prazo</label>
+          <div class="sim__prazos">
+            <button class="prazo active" onclick="setPrazo(24,this)">24x</button>
+            <button class="prazo" onclick="setPrazo(36,this)">36x</button>
+            <button class="prazo" onclick="setPrazo(48,this)">48x</button>
+            <button class="prazo" onclick="setPrazo(60,this)">60x</button>
+          </div>
+        </div>
+        <div class="sim__resultado">
+          <div class="sim__label">Parcela estimada</div>
+          <div class="sim__parcela" id="sim-resultado">R$ 2.814/mês</div>
+          <div class="sim__obs">Taxa 1,29% a.m. · Sujeita à análise de crédito</div>
+        </div>
+        <a href="https://wa.me/5511999999999?text=Quero%20simular%20meu%20financiamento!" target="_blank" class="btn-red-full">Simular com consultor →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA WHATSAPP ===== -->
+  <section class="cta" id="contato">
+    <div class="container cta__inner">
+      <div class="cta__left">
+        <h2>Pronto para encontrar<br />seu próximo carro?</h2>
+        <p>Nossa equipe está online agora. Fale em menos de 2 minutos, sem compromisso.</p>
+        <div class="cta__btns">
+          <a href="https://wa.me/5511999999999" target="_blank" class="btn-wa-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar no WhatsApp agora
+          </a>
+          <a href="tel:+5511999999999" class="btn-outline-cta">📞 (11) 99999-9999</a>
+        </div>
+      </div>
+      <div class="cta__card">
+        <div class="cta__online"><span class="dot-on"></span> Equipe online agora</div>
+        <p>💬 Última resposta: <strong>3 min atrás</strong></p>
+        <p>🕐 Seg–Sáb: <strong>8h às 20h</strong></p>
+        <p>⭐ <strong>4.9/5</strong> no Google</p>
+        <p>📍 <strong>São Paulo – SP</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="logo logo--ft">
+          <div class="logo__mark" style="background:#E8282A">AE</div>
+          <span style="color:#fff;font-weight:700;font-size:1.1rem">auto<strong style="color:#E8282A">elite</strong></span>
+        </div>
+        <p>Há mais de 12 anos conectando pessoas ao veículo certo. Transparência e confiança do início ao fim.</p>
+        <div class="ft__social"><a href="#">📸</a><a href="#">👍</a><a href="#">▶</a><a href="https://wa.me/5511999999999">💬</a></div>
+      </div>
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="#estoque">Comprar</a>
+        <a href="#contato">Vender</a>
+        <a href="#financiamento">Financiar</a>
+        <a href="#diferenciais">Sobre</a>
+        <a href="#avaliacoes">Avaliações</a>
+      </div>
+      <div class="footer__col">
+        <h4>Serviços</h4>
+        <a href="#">Simulação de crédito</a>
+        <a href="#">Vistoria e laudo</a>
+        <a href="#">Transferência</a>
+        <a href="#">Garantia estendida</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <p>📍 Av. das Nações Unidas, 4500<br />Santo Amaro, São Paulo – SP</p>
+        <p>📞 (11) 99999-9999</p>
+        <p>✉️ contato@autoelite.com.br</p>
+        <p>🕐 Seg–Sáb: 8h–20h</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="container">© 2025 AutoElite Multimarcas · CNPJ 12.345.678/0001-90 · Site demonstrativo</div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5511999999999" target="_blank" class="wa-float" id="wa-float">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>Falar agora</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

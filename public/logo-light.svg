@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 130" width="640" height="130">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF1010"/>
+      <stop offset="50%" stop-color="#CC0000"/>
+      <stop offset="100%" stop-color="#7A0000"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE566"/>
+      <stop offset="40%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#A07800"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE566"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== CAR SILHOUETTE ===== -->
+  <!-- Body bottom line with wheel arches -->
+  <path d="
+    M 30,98
+    L 110,98
+    Q 135,98 140,90
+    Q 145,82 155,80
+    Q 165,78 175,80
+    Q 185,82 190,90
+    Q 195,98 240,98
+    L 440,98
+    Q 470,98 475,90
+    Q 480,82 490,80
+    Q 500,78 510,80
+    Q 520,82 525,90
+    Q 530,98 560,98
+    L 590,100
+  " fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Roofline / car body top silhouette -->
+  <path d="
+    M 55,98
+    Q 60,92 75,80
+    Q 100,58 150,40
+    Q 210,20 290,16
+    Q 370,12 430,22
+    Q 490,32 530,55
+    Q 555,68 565,85
+    L 568,98
+  " fill="none" stroke="url(#goldGrad)" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Windshield line hint -->
+  <path d="M 215,22 Q 195,55 190,88" fill="none" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 400,22 Q 430,50 445,88" fill="none" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- ===== WHEEL ===== -->
+  <g transform="translate(502, 84)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="url(#goldGrad2)" stroke-width="3"/>
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="20" fill="none" stroke="url(#goldGrad2)" stroke-width="1.5" opacity="0.6"/>
+    <!-- Center hub -->
+    <circle cx="0" cy="0" r="5" fill="url(#goldGrad2)"/>
+    <!-- Spokes (12 spokes) -->
+    <line x1="0" y1="-20" x2="0" y2="-6" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="0" y1="6" x2="0" y2="20" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="-20" y1="0" x2="-6" y2="0" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="6" y1="0" x2="20" y2="0" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="-14.1" y1="-14.1" x2="-4.2" y2="-4.2" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="4.2" y1="4.2" x2="14.1" y2="14.1" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="14.1" y1="-14.1" x2="4.2" y2="-4.2" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="-4.2" y1="4.2" x2="-14.1" y2="14.1" stroke="url(#goldGrad2)" stroke-width="2"/>
+    <line x1="-7.6" y1="-18.5" x2="-2.3" y2="-5.5" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+    <line x1="2.3" y1="5.5" x2="7.6" y2="18.5" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+    <line x1="7.6" y1="-18.5" x2="2.3" y2="-5.5" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+    <line x1="-2.3" y1="5.5" x2="-7.6" y2="18.5" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+    <line x1="-18.5" y1="-7.6" x2="-5.5" y2="-2.3" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+    <line x1="5.5" y1="2.3" x2="18.5" y2="7.6" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+    <line x1="-18.5" y1="7.6" x2="-5.5" y2="2.3" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+    <line x1="5.5" y1="-2.3" x2="18.5" y2="-7.6" stroke="url(#goldGrad2)" stroke-width="1.5"/>
+  </g>
+
+  <!-- ===== TOP TEXT ===== -->
+  <text
+    x="30" y="95"
+    font-family="Arial Black, Impact, sans-serif"
+    font-size="82"
+    font-weight="900"
+    font-style="italic"
+    fill="url(#redGrad)"
+    letter-spacing="-2"
+  >TOP</text>
+
+  <!-- ===== Multimarcas TEXT ===== -->
+  <text
+    x="62" y="118"
+    font-family="Arial, sans-serif"
+    font-size="17"
+    font-weight="500"
+    fill="#00AACC"
+    letter-spacing="3.5"
+  >Multimarcas</text>
+</svg>

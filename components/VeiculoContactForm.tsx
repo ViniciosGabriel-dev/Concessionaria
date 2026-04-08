@@ -31,7 +31,7 @@ export default function VeiculoContactForm({ veiculo }: { veiculo: Veiculo }) {
   const entradaMax = Math.round(veiculo.preco * 0.8)
 
   const waMsg = encodeURIComponent(
-    `Olá! Vi o ${veiculo.marca} ${veiculo.modelo} ${veiculo.ano} por ${formatBRL(veiculo.preco)} no site da Top Multimarcas e tenho interesse!`,
+    `Olá! Vi o ${veiculo.marca} ${veiculo.modelo} ${veiculo.ano} por ${formatBRL(veiculo.preco)} no site da DE Multimarcas e tenho interesse!`,
   )
 
   function handleSubmit(e: React.FormEvent) {

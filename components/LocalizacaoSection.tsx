@@ -53,7 +53,7 @@ export default function LocalizacaoSection() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Localização Top Multimarcas"
+          title="Localização DE Multimarcas"
         />
       </div>
 

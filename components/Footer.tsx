@@ -1,9 +1,10 @@
 import Link from 'next/link'
 
-const WA = 'https://wa.me/5511977254727'
-const INSTAGRAM = 'https://instagram.com/topmultimarcas10'
-const FACEBOOK = 'https://facebook.com/topmutimarcas'
-const MAPS = 'https://maps.google.com/?q=Avenida+Itaquera+1307+Jardim+Maringá+São+Paulo+SP'
+
+const WA = 'https://wa.me/5519991251565'
+const INSTAGRAM = 'https://www.instagram.com/de.multimarcas?igsh=Z2t1MWFoMnF6MmZr'
+const FACEBOOK = 'https://www.facebook.com/share/1JjsxEgjaa/?mibextid=wwXIfr'
+const MAPS = 'https://maps.google.com/?q=R.+Joaquim+Lacerda+Coelho,+2101+Jardim+Capivari+Campinas+SP'
 
 
 export default function Footer() {
@@ -13,10 +14,6 @@ export default function Footer() {
 
         {/* Marca + redes sociais */}
         <div className="footer__brand">
-          <Link href="/" className="logo logo--ft">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-light.png" alt="Top Multimarcas" className="logo__img" />
-          </Link>
           <p>Há mais de 12 anos conectando pessoas ao veículo certo. Transparência e confiança do início ao fim.</p>
 
           {/* Redes sociais */}
@@ -50,9 +47,8 @@ export default function Footer() {
 {/* Contato + Mapa */}
         <div className="footer__col">
           <h4>Contato</h4>
-          <p>📍 Av. Itaquera, 1307<br />Jardim Maringá, São Paulo – SP</p>
-          <p>📞 (11) 2269-5575</p>
-          <p>📱 (11) 97725-4727</p>
+          <p>📍 R. Joaquim Lacerda Coelho, 2101<br />Jardim Capivari, Campinas – SP</p>
+          <p>📱 (19) 99125-1565</p>
           <a href={MAPS} target="_blank" rel="noopener noreferrer" className="ft__maps-btn">
             📍 Ver no Google Maps
           </a>
@@ -61,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bar">
-        <div className="container">© 2025 Top Multimarcas · CNPJ 12.345.678/0001-90 · Site demonstrativo</div>
+        <div className="container">© 2025 DE Multimarcas · CNPJ 12.345.678/0001-90 · Site demonstrativo</div>
       </div>
     </footer>
   )

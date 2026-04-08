@@ -89,18 +89,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ===== HEADER ===== */
 .header {
-  position: fixed;
-  top: var(--topbar-h);
-  left: 0; right: 0;
+  position: absolute;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   background: transparent;
-  border-bottom: 1px solid transparent;
-  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-.header.scrolled {
-  background: var(--white);
-  border-bottom-color: var(--border);
-  box-shadow: 0 2px 16px rgba(0,0,0,.12);
 }
 .header__inner {
   display: flex;
@@ -120,8 +112,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--text);
 }
 .logo strong { color: var(--red); }
-.logo__img { margin-top: 10px; height: 120px; width: auto; object-fit: contain; display: block; }
-.logo--ft .logo__img { height: 90px; }
+.logo__img { height: 200px; width: auto; object-fit: contain; display: block; margin-top: 55px; }
+.logo--ft .logo__img { height: 140px; }
 .logo__mark {
   width: 32px; height: 32px;
   background: var(--red);
@@ -230,7 +222,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: space-between;
   gap: 32px;
   padding: 52px 20px;
-  padding-top: calc(var(--topbar-h) + 80px);
+  padding-top: 140px;
 }
 
 .hero__text-block { max-width: 540px; }

@@ -8,9 +8,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Top Multimarcas | Compre seu carro com segurança',
+  title: 'DE Multimarcas | Compre seu carro com segurança',
   description:
-    'Top Multimarcas: encontre veículos seminovos e usados com procedência, financiamento facilitado e atendimento transparente. Fale pelo WhatsApp agora.',
+    'DE Multimarcas: encontre veículos seminovos e usados com procedência, financiamento facilitado e atendimento transparente. Fale pelo WhatsApp agora.',
   icons: { icon: '/favcon.png' },
 }
 

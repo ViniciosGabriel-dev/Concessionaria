@@ -11,7 +11,7 @@ export default function DiferenciaisSection() {
   return (
     <section className="difs" id="diferenciais">
       <div className="container">
-        <h2 className="h2-center">Por que comprar na Top Multimarcas?</h2>
+        <h2 className="h2-center">Por que comprar na DE Multimarcas?</h2>
         <p className="sub-center">Transparência e cuidado em cada etapa da sua compra</p>
         <div className="difs__grid">
           {DIFS.map(d => (

@@ -4,8 +4,8 @@ import WaFloat from '@/components/WaFloat'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sobre | Top Multimarcas',
-  description: 'Conheça a Top Multimarcas, uma das revendas de automóveis de grande prestígio na região de São Paulo.',
+  title: 'Sobre | DE Multimarcas',
+  description: 'Conheça a DE Multimarcas, uma das revendas de automóveis de grande prestígio na região de São Paulo.',
 }
 
 const DIFERENCIAIS = [
@@ -28,7 +28,7 @@ export default function SobrePage() {
           <div className="container sobre__hero-inner">
             <div className="sobre__hero-text">
               <span className="sobre__badge">Quem somos</span>
-              <h1 className="sobre__h1">Top Multimarcas</h1>
+              <h1 className="sobre__h1">DE Multimarcas</h1>
               <p className="sobre__lead">
                 Uma das revendas de automóveis de maior prestígio na região de São Paulo.
                 Especializados na venda de veículos nacionais, importados, zero quilômetro e seminovos.
@@ -62,7 +62,7 @@ export default function SobrePage() {
             <div className="sobre__text-block">
               <h2>Sobre a empresa</h2>
               <p>
-                A <strong>Top Multimarcas</strong> é uma revenda especializada em veículos nacionais e importados,
+                A <strong>DE Multimarcas</strong> é uma revenda especializada em veículos nacionais e importados,
                 novos e seminovos, localizada na Av. Itaquera, 1307 — Jardim Maringá, São Paulo – SP.
               </p>
               <p>
@@ -95,7 +95,7 @@ export default function SobrePage() {
         {/* Diferenciais */}
         <section className="sobre__sec sobre__sec--gray">
           <div className="container">
-            <h2 className="h2-center">Por que comprar na Top Multimarcas?</h2>
+            <h2 className="h2-center">Por que comprar na DE Multimarcas?</h2>
             <p className="sub-center">Transparência e cuidado em cada etapa da sua compra</p>
             <div className="sobre__difs">
               {DIFERENCIAIS.map(d => (

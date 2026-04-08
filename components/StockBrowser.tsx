@@ -145,7 +145,7 @@ export default function StockBrowser() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400&q=80"
-              alt="Veículos Top Multimarcas"
+              alt="Veículos DE Multimarcas"
               className="hero__bg-img"
             />
             <div className="hero__bg-overlay" />
@@ -156,7 +156,7 @@ export default function StockBrowser() {
                 <div className="hero__badge-icon">%</div>
                 <div>
                   <div className="promo-name">FEIRÃO</div>
-                  <div className="promo-brand">Top Multimarcas</div>
+                  <div className="promo-brand">DE Multimarcas</div>
                 </div>
               </div>
               <h1 className="hero__h1">
@@ -345,7 +345,7 @@ export default function StockBrowser() {
 
 function VehicleCard({ v, i }: { v: Veiculo; i: number }) {
   const waMsg = encodeURIComponent(
-    `Olá! Vi o ${v.marca} ${v.modelo} ${v.ano} por ${formatBRL(v.preco)} no site da Top Multimarcas e tenho interesse. Poderia me dar mais detalhes?`,
+    `Olá! Vi o ${v.marca} ${v.modelo} ${v.ano} por ${formatBRL(v.preco)} no site da DE Multimarcas e tenho interesse. Poderia me dar mais detalhes?`,
   )
 
   return (

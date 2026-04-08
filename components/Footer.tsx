@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bar">
-        <div className="container">© 2025 DE Multimarcas · CNPJ 12.345.678/0001-90 · Site demonstrativo</div>
+        <div className="container">© 2026 DE Multimarcas · CNPJ 12.345.678/0001-90 · Site demonstrativo</div>
       </div>
     </footer>
   )

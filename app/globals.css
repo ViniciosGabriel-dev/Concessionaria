@@ -9,10 +9,10 @@
 
 :root {
   --topbar-h: 0px;
-  --red:       #111111;
-  --red-h:     #000000;
-  --red-lt:    #F0F0F0;
-  --blue:      #222222;
+  --red:       #E8282A;
+  --red-h:     #C41F21;
+  --red-lt:    #FEF2F2;
+  --blue:      #E8282A;
   --yellow:    #F5C518;
   --yellow-h:  #D4A800;
   --yellow-lt: #FFFBEA;
@@ -219,7 +219,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .hero__bg-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,.92) 0%, rgba(17,17,17,.78) 55%, rgba(0,0,0,.45) 100%);
+  background: linear-gradient(90deg, rgba(17,5,5,.88) 0%, rgba(100,10,10,.70) 55%, rgba(60,5,5,.50) 100%);
 }
 
 .hero__banner-content {
@@ -590,8 +590,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .vcard__opt {
   font-size: .68rem;
-  color: var(--blue);
-  background: #EBF4FF;
+  color: var(--red);
+  background: var(--red-lt);
   padding: 2px 7px;
   border-radius: 4px;
   font-weight: 500;
@@ -817,8 +817,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .fin__tag {
   display: inline-block;
-  background: #EBF4FF;
-  color: var(--blue);
+  background: var(--red-lt);
+  color: var(--red);
   font-size: .74rem;
   font-weight: 700;
   text-transform: uppercase;

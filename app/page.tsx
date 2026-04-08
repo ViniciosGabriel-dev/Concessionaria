@@ -1,4 +1,3 @@
-import TopBar from '@/components/TopBar'
 import Header from '@/components/Header'
 import StockBrowser from '@/components/StockBrowser'
 import DiferenciaisSection from '@/components/DiferenciaisSection'
@@ -11,7 +10,6 @@ import WaFloat from '@/components/WaFloat'
 export default function Home() {
   return (
     <>
-      <TopBar />
       <Header />
       <main>
         <StockBrowser />

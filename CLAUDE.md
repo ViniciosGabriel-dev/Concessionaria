@@ -4,62 +4,58 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**AutoElite Multimarcas** — a Brazilian used car dealership single-page marketing website. Three files, no build process.
+**Top Multimarcas** — a Brazilian used car dealership website built with Next.js 14 (App Router) and TypeScript. No external state management or UI libraries.
 
-## Running the Project
-
-Open `index.html` directly in a browser, or serve locally:
+## Commands
 
 ```bash
-python -m http.server 8000
-# or
-npx http-server .
+npm run dev      # Start dev server (localhost:3000)
+npm run build    # Production build
+npm run lint     # ESLint via next lint
 ```
-
-No compilation, bundling, or installation required.
 
 ## Architecture
 
-### Files
+### Routing (App Router)
 
-- [index.html](index.html) — Full page structure with all sections as semantic HTML
-- [script.js](script.js) — All interactivity and data; no framework
-- [style.css](style.css) — All styles; ~1000 lines with CSS custom properties
+- `/` → [app/page.tsx](app/page.tsx) — Home page, assembles all sections
+- `/estoque` → [app/estoque/page.tsx](app/estoque/page.tsx) — Full stock page
+- `/veiculo/[id]` → [app/veiculo/[id]/page.tsx](app/veiculo/[id]/page.tsx) — Vehicle detail page (statically generated via `generateStaticParams`)
+- `/sobre` → [app/sobre/page.tsx](app/sobre/page.tsx) — About page
 
 ### Vehicle Data
 
-Vehicles are hardcoded in the `veiculos` array in [script.js](script.js). Each object has: `marca`, `modelo`, `ano`, `km`, `cambio`, `combustivel`, `cor`, `preco`, `parcela`, `img`, `fotos`, `opcionais[]`, `destaque`. To add or update vehicles, edit this array directly.
+All vehicles are hardcoded in [lib/veiculos.ts](lib/veiculos.ts) in the `veiculos` array. The `Veiculo` interface is defined there too. `formatBRL` and `formatKm` utility functions live in the same file — always use these for displaying prices and mileage.
 
-### Key JavaScript Patterns
+Key data notes:
+- `fotos` is an **integer** (photo count badge), not image URLs. `img` is the single card image URL.
+- `parcela` is pre-calculated per vehicle at 1.29%/month over 60 installments — it is not computed at runtime.
+- `destaque: true` vehicles appear first in the default sort order.
 
-- `renderVeiculos(lista)` — Rebuilds the stock grid from a vehicle array; called after every filter/sort
-- `filtrarVeiculos()` — Reads all filter inputs and calls `renderVeiculos` with the filtered subset
-- `calcularParcela()` — Payment simulator using hardcoded 1.29%/month interest rate
-- `observeCards()` — Must be called after each `renderVeiculos` to attach scroll animations to new cards
-- `formatBRL(n)` / `formatKm(n)` — Formatting utilities; use these whenever displaying prices or mileage
+### Key Components
 
-### Vehicle Data Notes
-
-- `fotos` is an **integer** (photo count badge), not image URLs. Only `img` holds the single card image URL.
-- `parcela` is pre-calculated and stored per vehicle — it does not use `calcularParcela()` (which is for the simulator only).
+- [components/StockBrowser.tsx](components/StockBrowser.tsx) — `'use client'`; contains the Hero section, brand filter pills, search/filter bar, stock grid with pagination, and `VehicleCard`. All filter state lives here. `getFiltered()` is a pure function that takes filter values and returns the filtered+sorted array.
+- [components/VeiculoContactForm.tsx](components/VeiculoContactForm.tsx) — Sticky sidebar contact form on the vehicle detail page.
+- [components/SimilarCarousel.tsx](components/SimilarCarousel.tsx) — Horizontal scroll carousel of related vehicles on the detail page.
+- [components/WaFloat.tsx](components/WaFloat.tsx) — Floating WhatsApp button present on all pages.
 
 ### WhatsApp Number
 
-`5511999999999` is hardcoded in multiple places: header, floating button, vehicle cards (via `renderVeiculos`), footer, and the empty-state fallback in `renderVeiculos`. Use search-and-replace across all three files to update it.
+`WA_NUMBER = '5511977254727'` is defined in [components/StockBrowser.tsx](components/StockBrowser.tsx) and also appears in other components. Use search-and-replace across the codebase to update it.
 
-### CSS Design Tokens
+### Styling
 
-Defined at `:root` in [style.css](style.css):
+All styles are in [app/globals.css](app/globals.css) — a single CSS file using custom properties. No CSS modules or Tailwind.
+
+CSS design tokens at `:root`:
 - Brand red: `#E8282A`, brand blue: `#1D6DD4`, WhatsApp green: `#25D366`
-- Radius: `--radius: 10px`, `--r-sm: 6px`
-- Shadows: `--shadow`, `--shadow-md`, `--shadow-lg`
+- `--radius: 10px`, `--r-sm: 6px`
+- `--shadow`, `--shadow-md`, `--shadow-lg`
 
-### External Dependencies (CDN only)
+### Image Handling
 
-- Google Fonts — Inter typeface
-- Unsplash — vehicle images via URL
-- WhatsApp Business API — all contact buttons link to `https://wa.me/...`
+The detail page and most components use plain `<img>` tags with `eslint-disable-next-line @next/next/no-img-element` comments — this is intentional since images come from Unsplash URLs. The brand logo pills in `StockBrowser` use Next.js `<Image>` with local `/public` assets.
 
 ## Language & Locale
 
-All user-facing text is in Brazilian Portuguese. Currency is BRL formatted as `R$ X.XXX,XX` (dot as thousands separator, comma as decimal). Dates and numbers follow Brazilian conventions.
+All user-facing text is in Brazilian Portuguese. Currency is BRL formatted as `R$ X.XXX` (no decimals, dot as thousands separator) via `formatBRL`. Dates and numbers follow Brazilian conventions (`pt-BR` locale).

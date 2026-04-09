@@ -89,15 +89,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ===== HEADER ===== */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
   background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.header.scrolled {
+  background: #111827;
+  border-bottom-color: rgba(255,255,255,.08);
+  box-shadow: 0 2px 16px rgba(0,0,0,.3);
+}
+.header--veiculo {
+  background: #111827;
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .header__inner {
   display: flex;
   align-items: center;
-  height: 62px;
+  height: 80px;
   gap: 28px;
 }
 
@@ -112,8 +123,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--text);
 }
 .logo strong { color: var(--red); }
-.logo__img { height: 200px; width: auto; object-fit: contain; display: block; margin-top: 55px; }
-.logo--ft .logo__img { height: 140px; }
+.logo__img { height: 150px; width: auto; object-fit: contain; display: block; padding-top: 5px; }
+.logo--ft .logo__img { height: 56px; }
 .logo__mark {
   width: 32px; height: 32px;
   background: var(--red);
@@ -154,7 +165,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: none;
   transition: color .25s ease;
 }
-.header.scrolled .header__address { color: var(--muted); }
+.header.scrolled .header__address { color: rgba(255,255,255,.8); }
 @media (min-width: 960px) { .header__address { display: block; } }
 
 .header__tel {
@@ -193,7 +204,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ===== HERO ===== */
-.hero { background: #fff; }
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero { background: #fff; animation: pageEnter .45s ease both; }
 
 /* Banner azul */
 .hero__banner {
@@ -222,6 +237,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: space-between;
   gap: 32px;
   padding: 52px 20px;
+  padding-top: calc(var(--topbar-h) + 80px);
   padding-top: 140px;
 }
 
@@ -517,6 +533,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .vcard.visible { opacity: 1; transform: translateY(0); }
 .vcard:hover { transform: translateY(-4px) !important; box-shadow: var(--shadow-lg); }
+.vcard:active { transform: scale(0.97) !important; box-shadow: var(--shadow); transition: transform .1s ease, box-shadow .1s ease; }
 
 .vcard__img {
   position: relative;
@@ -1653,7 +1670,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ===== PÁGINA DE DETALHE DO VEÍCULO ===== */
-.det { background: var(--bg); padding-top: 64px; }
+.det { background: var(--bg); padding-top: 80px; animation: pageEnter .45s ease both; }
 
 /* Gallery */
 .det__gallery {

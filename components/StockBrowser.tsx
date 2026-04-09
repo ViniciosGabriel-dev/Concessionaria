@@ -203,7 +203,7 @@ export default function StockBrowser() {
               <input
                 type="text"
                 className="busca-input-grande"
-                placeholder="Descreva o que você está procurando..."
+                placeholder="O que você está buscando..."
                 value={keyword}
                 onChange={e => setKeyword(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && handleFiltrar()}
